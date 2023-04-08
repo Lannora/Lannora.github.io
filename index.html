@@ -8,12 +8,32 @@
         <title>Lannora</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li href="#">Test 1</li>
-                <li href="#">Test 2</li>
-                <li href="#">Test 3</li>
-            </ul>
-        </nav>
+        <header>
+            <nav>
+                <h1>Lannora</h1>
+                <button id="menu-toggle">Menu</button>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <script>
+                /* Script pour le toggle du menu en version mobile */
+                var menuToggle = document.getElementById('menu-toggle');
+                var navList = document.querySelector('nav ul');
+        
+                menuToggle.addEventListener('click', function() {
+                    navList.classList.toggle('active');
+                });
+            </script>
+        </header>
+
+        <main>
+
+        </main>
+
+
     </body>
 </html>

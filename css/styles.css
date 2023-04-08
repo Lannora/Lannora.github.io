@@ -6,5 +6,54 @@ body {
     --mint: #09bc8aff;
 
     background-color: var(--prussian-blue);
-    color: #fff;
+    color: white;
+}
+
+nav {
+    background-color: var(--midnight-green);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* masquer la liste des liens en version mobile */
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: var(--midnight-green);
+}
+
+/* Media queries pour afficher la liste des liens en version desktop */
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+    }
 }
