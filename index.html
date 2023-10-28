@@ -5,23 +5,231 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/alert.css">
+        <link rel="shortcut icon" href="img/1104.png" type="image/x-icon">
         <title>Lannora</title>
     </head>
-    <body>
+
+    <alert>
+        <div id="overlay"></div>
+        <div id="alertPanel">
+            <span class="close" onclick="closealert();"></span>
+            <img src="img/skins/Heimerdinger_0.jpg" alt="">
+            <h1>DISCLAIMER</h1>
+            <p>
+                Le site n'est pas "responsive". Si vous êtes sur mobile ou que vous avez une taille d'écran bien spécifique, des problèmes d'affichage apparaitrons.
+            </p>
+            <p>
+                Rien n'est à jour car pour cela il faudrait que je crée une application avec l'API de Riot Games et je n'ai pas le temps ni les connaissances nécessaire (Peut être un jour qui sait?).
+            </p>
+            <p>
+                Le présent site, qui reprend les codes graphique de League of legends®, existe uniquement à titre d'exercice et n'est pas approuvé par Riot Games et ne reflète pas les points de vue ou les opinions de Riot Games ou de toute personne officiellement impliquée dans la production ou la gestion de League of Legends. League of Legends et Riot Games sont des marques commerciales ou des marques déposées de Riot Games, Inc. League of Legends © Riot Games, Inc.
+            </p>
+        </div>
+        <div id="alertCopyButton">
+            <span class="close" onclick="closealert();"></span>
+            <h1>Comment me contacter ?</h1>
+            <p>C'est simple. Il te sufit de suivre les étapes suivante :</p>
+            <p>1. Rejoind mon serveur Discord en cliquand sur le bouton : </p>
+            <div id="discordButton">
+                <img src="img/discord-icon.png">
+                <p>Rejoindre le serveur</p>
+            </div>
+            <img src="img/ggez.gif">
+        </div>
+    </alert>
+
+    <body onload="alert();">
+        
         <header>
             <nav>
-                <h1>Lannora</h1>
-                <div class="main_pages">
-                    <a href="#">Accueil</a>
-                    <a href="#">Actualité</a>
-                    <a href="#">Contact</a>
-                </div>
+                <a href="#pseudo" class="link link-nav">Accueil</a>
+                <a href="#bio" class="link link-nav">Bio</a>
+                <a href="#lol" class="link link-nav">Classement LoL</a>
+                <a href="#tft" class="link link-nav">Classement TFT</a>
+                <a href="#contact" class="link link-nav">Me contacter</a>
             </nav>
+            <script src="js/nav.js"></script>
         </header>
-
+        
         <main>
-
+            <h1 id="pseudo" class="background-img">Lannora</h1>
+            <div id="bio">
+                <div class="title">
+                    <h3>Chapitre Un</h3>
+                    <h1><span>Bio</span></h1>
+                    <div>
+                        <img src="img/decorator-title.png">
+                    </div>
+                </div>
+                <div class="content">
+                    <ol>
+                        <li class="box">
+                            <h2 class="question">Quel est ton prénom ?</h2>
+                            <p class="reponse">Je m'appel Maxence et j'ai pour pseudo Lannora (pour ça je pense que vous l'auriez deviné).</p>
+                        </li>
+                        <li class="box">
+                            <h2 class="question">Quel genre de jeux vidéo aime-tu jouer ?</h2>
+                            <p class="reponse">Je joue principalement à League of Legends et Teamfight Tactics. j'aime aussi les FPS avec des sorts de compétences comme Valorant ou Paladins. J'ai découvert League of Legends en 2016 mais je joue depuis 2012 avec Farming Simulator. Premier jeu auquel j'ai joué. Je joue principalement en parties compétitives et j'ai gagné mes 3 derniers Clashs sur LoL (oui je suis fière). Je ne prétends pas être bon et c'est loin d'être le cas.</p>
+                        </li>
+                        <li class="box">
+                            <h2 class="question">Quel est ton rôle préféré dans le jeu ?</h2>
+                            <p class="reponse">Je joue actuellement au rôle de support. Je connais bien aussi la toplane. c'est par là que j'ai commencé (c'est un autre monde).</p>
+                        </li>
+                        <li class="box">
+                            <h2 class="question">Quels champions préfères-tu jouer en tant que support et pourquoi ?</h2>
+                            <p class="reponse">J'ai longtemps jouer Alistar et Braum, mes mains de coeur. J'ai aussi beaucoup jouer Morgana et Lux, deux perso avec beaucoup de dégats et de cc qui restent fort dans la meta actuelle. Dernièrement Taric est l'un des perso que je joue le plus. Il est très plaisant a jouer avec son cc, son heal et son ult qui rend invincible. Pour faire simple, un kit de sort plutôt fort et quelques dégats qui s'adapte a beaucoup de compos.</p>
+                        </li>
+                        <li class="box">
+                            <h2 class="question">As-tu des joueurs préférés ou des équipes préférées que tu suis dans les compétitions ?</h2>
+                            <p class="reponse">Cela fait longtemps que je ne regarde plus de compétition (à part les worlds) sur LoL. Je regarde cependant la scène valorant France (même si je ne suis pas très assidue) avec l'équipe Mandatory et maintenant je vais également supporter la nouvelle équipe Gentle Mates. Deux équipes donc deux fois plus de bonheur. Je n'ai pas de joueurs préférés. A la fois je ne regarde pas asser les compétitions et je ne retiens pas forcément les noms. Bien entendu, je vais avoir retenu des noms tels que InSec, Faker, Rekkles sur LoL ou Akumaaaaa sur Valorant. Ils ont marqué par leurs talents.</p>
+                        </li>
+                        <!--
+                        d'autres quetions ? utilise le model ci-dessous
+                        <li class="box">
+                            <h2 class="question"></h2>
+                            <p class="reponse"></p>
+                        </li>
+                        -->
+                    </ol>
+                </div>
+            </div>
+            <div id="lol">
+                <div class="title">
+                    <h3>Chapitre Deux</h3>
+                    <h1><span>Classement LoL</span></h1>
+                    <div>
+                        <img src="img/decorator-title.png">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="profil">
+                        <div class="card card-1">
+                            <div class="card-body">
+                                <div class="corner bottom-left"></div>
+                            </div>
+                            <div class="info">
+                                <h1>La Soeur Voise</h1>
+                                <div class="rank-border bottom-left">
+                                    <img src="img/Silver-Embleme.png" alt="">
+                                </div>
+                                <div class="info-profil">
+                                    <span>LvL 266</span>
+                                    <span>EUW</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-2">
+                            <div class="card-body">
+                                <div class="corner bottom-left"></div>
+                            </div>
+                            <div class="info">
+                                <h1>HorsesGuards</h1>
+                                <div class="rank-border bottom-left">
+                                    <img src="img/Gold-Embleme.png" alt="">
+                                </div>
+                                <div class="info-profil">
+                                    <span>LvL 35</span>
+                                    <span>EUW</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- pour toutes nouvelles cartes
+                        <div class="card card-2"> !changer le numéro de carte et ajouter le css correspondant pour changer l'image du champion
+                            <div class="card-body">
+                                <div class="corner bottom-left"></div>
+                            </div>
+                            <div class="info">
+                                <h1>HorsesGuards</h1> !changer le pseudo du joueur
+                                <div class="rank-border bottom-left">
+                                    <img src="img/Bronze-Embleme.png" alt=""> !changer l'embleme de rank pour correspondre au joueur
+                                </div>
+                                <div class="info-profil"> !changer les info pour correspondre au joueur
+                                    <span>LvL 35</span>
+                                    <span>EUW</span>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+            <div id="tft">
+                <div class="title">
+                    <h3>Chapitre Trois</h3>
+                    <h1><span>Classement TFT</span></h1>
+                    <div>
+                        <img src="img/decorator-title.png">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="profil">
+                        <div class="card card-tft-1">
+                            <div class="card-body">
+                                <div class="corner bottom-left"></div>
+                            </div>
+                            <div class="info">
+                                <h1>La Soeur Voise</h1>
+                                <div class="rank-border bottom-left">
+                                    <img src="img/Gold-Embleme.png" alt="">
+                                </div>
+                                <div class="info-profil">
+                                    <span>LvL 266</span>
+                                    <span>EUW</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-tft-2">
+                            <div class="card-body">
+                                <div class="corner bottom-left"></div>
+                            </div>
+                            <div class="info">
+                                <h1>HorsesGuards</h1>
+                                <div class="rank-border bottom-left">
+                                    <img src="img/Silver-Embleme.png" alt="">
+                                </div>
+                                <div class="info-profil">
+                                    <span>LvL 35</span>
+                                    <span>EUW</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <div class="title">
+                    <h3>Chapitre Quatre</h3>
+                    <h1><span>Contact</span></h1>
+                    <div>
+                        <img src="img/decorator-title.png">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="element">
+                        <div class="contact-infos">
+                            <div class="background-video">
+                                <video muted autoplay loop>
+                                    <source src="video/background-video-d-01.mp4" type="video/mp4">
+                                </video>
+                                <div id="contactButton" data-clipboard-text="https://discord.gg/KK6NnNB6bc" onclick="alertWithCopyButton();">
+                                    <a class="link" >
+                                        <p class="exclude">Clique ici pour me contacter !</p>
+                                    </a>
+                                </div>
+                                <p >N'hésitez pas à me contacter via Discord si vous avez des suggestions pour améliorer le site ou si vous voulez jouer avec moi à League of Legends. Je suis ouvert à toutes les discussions et j'essaierai de répondre à votre message dès que possible. J'attends vos messages avec impatience !</p>
+                            </div>
+                        </div>
+                        <video src="video/Poro_base_AN_idle3.mp4" muted loop autoplay></video>    
+                    </div>
+                </div>
+            </div>
         </main>
 
+        <footer>
+            <p class="legal">Le présent site, qui reprend les codes graphique de League of legends®, existe uniquement à titre d'exercice et n'est pas approuvé par Riot Games et ne reflète pas les points de vue ou les opinions de Riot Games ou de toute personne officiellement impliquée dans la production ou la gestion de League of Legends. League of Legends et Riot Games sont des marques commerciales ou des marques déposées de Riot Games, Inc. League of Legends © Riot Games, Inc.</p>
+        </footer>
+        <script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+        <script src="js/alert.js"></script>
     </body>
 </html>

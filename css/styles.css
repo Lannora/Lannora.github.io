@@ -1,51 +1,409 @@
-body {
-    --carolina-blue: #74b3ceff;
-    --blue-munsell: #508991ff;
-    --prussian-blue: #172a3aff;
-    --midnight-green: #004346ff;
-    --mint: #09bc8aff;
+/*Parametres généraux tel que la couleur ou la police de caratère*/
+html {
+    --blue1 : #CDFAFA;
+    --blue2 : #0AC8B9;
+    --blue3 : #0397AB;
+    --blue4 : #005A82;
+    --blue5 : #0A323C;
+    --blue6 : #091428;
+    --blue7 : #0A1428;
 
-    background-color: var(--prussian-blue);
-    color: white;
+    --gold1 : #F0E6D2;
+    --gold2 : #C8AA6E;
+    --gold3 : #C89B3C;
+    --gold4 : #785A28;
+    --gold5 : #463714;
+    --gold6 : #32281E;
+
+    --grey1 : #A09B8C;
+    --grey15 : #5B5A56;
+    --grey2 : #3C3C41;
+    --grey3 : #1E2328;
+    --greyCool : #1E282D;
+    --hextechBlack : #010A13;
+
+    cursor: url('../img/cursor.png'), auto;
+
+    --ease-bezier: cubic-bezier(0.165,0.84,0.44,1);
+
+}
+
+@font-face {
+    font-family: 'BeaufortForLoL Regular';
+    src: url(../font/BeaufortForLoL-TTF/BeaufortforLOL-Regular.ttf) format('truetype'),
+         url(../font/BeaufortForLoL-OTF/BeaufortforLOL-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Spiegel Regular';
+    src: url(../font/Spiegel-TTF/Spiegel_TT_Regular.ttf) format('truetype'),
+         url(../font/Spiegel-OTF/Spiegel-Regular.otf) format('opentype');
+}
+
+
+body {
+    background-color: var(--hextechBlack);
+    color: var(--gold1);
+    font-family: 'BeaufortForLoL Regular',Verdana, Tahoma, sans-serif;
+    margin: 0;
+}
+
+p {
+    font-family: 'Spiegel Regular', Tahoma, Verdana, sans-serif;
+}
+
+.centered-screen-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Paramères spécifique au style de chaques éléments*/
+
+header {
+    background-color: var(--hextechBlack);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 46px;
+    z-index: 1;
 }
 
 nav {
-    background-color: var(--midnight-green);
-    color: white;
+    font-family: "Beaufort for LOL";
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-nav h1 {
-    margin: 0;
-	font-size: 24px;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+nav a {
+    color: var(--gold1);
+    opacity: 0.5;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-bottom: 2px solid var(--gold4);
 }
- 
-nav .main_pages {
+
+nav a:hover {
+    transition: opacity 0.3s ease 0s;
+    opacity: 1;
+    border-bottom: 2px solid var(--gold3);
+}
+
+.link, button {
+    cursor: url(../img/cursor-pointer.png), auto;
+}
+
+nav a.link-nav:active {
+    opacity: 1;
+    border-bottom: 2px solid var(--gold3);
+}
+
+nav a.active {
+    opacity: 1;
+    border-bottom: 2px solid var(--gold3);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#pseudo {
+    font-size: 180px;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    color: var(--gold3);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pseudo.background-img {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(1 10 19)), url(../img/Splash_Santa_Braum.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.title h3 {
+    color: var(--gold3);
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.12;
+    letter-spacing: 0.025rem;
+    font-weight: 700;
+}
+
+.title h1 {
+    font-size: 5.625rem;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.title div {
+    margin-top: 1.75rem;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.content {
+    margin-top: 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+footer {
+    margin: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
+}
+
+div#bio div.content ol{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+div#lol, div#tft {
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    flex-basis: 45%;
+    margin: 15px;
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+.box p {
+    font-size: 1rem;
+    line-height: 1.24;
+    letter-spacing: 0.01em;
+    color: var(--grey1);
+}
+
+.box::marker {
+    font-size: 1.5em;
+}
+
+.box:nth-child(2n+1) {
+    padding-right: 30px;
+}
+
+.box:nth-last-child(1) {
+    flex-basis: auto;
+    margin-right: 45px;
+    padding-right: 30px;
+}
+
+.disclaimer {
+    align-self: center;
+    background: red;
+}
+
+.profil {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-	margin: 0;
-	padding: 0;
 }
- 
-nav .main_pages a {
-    
+
+.card {
+    width: 300px;
+    height: 450px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.card-1 {
+    background: url(../img/skins/Morgana.jpg) no-repeat center center;
+}
+
+.card-2{
+    background: url(../img/skins/Lux_7.jpg) no-repeat center center;
+}
+
+.card-tft-1 {
+    background: url(../img/skins/Tooltip_ChibiYasuo_Dragonmancer_Dragonmancer1_Tier1.CHIBI_Yasuo_Dragonmancer.png) no-repeat center center;
+    background-size: cover;
+    background-position-x: -145px;
+}
+
+.card-tft-2 {
+    background: url(../img/skins/Tooltip_Malphite_Base_Classic_Tier1.CHIBI_Malphite_Base.png) no-repeat center center;
+    background-size: cover;
+}
+
+.card h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.card-body {
+    height: 450px;
+    position: relative;
+}
+
+.info {
+    margin-top: -185px;
+    height: 110px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-profil {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.card span {
+    color: var(--gold3);
+}
+
+.card img {
+    width: 90px;
+    height: 90px;
+    margin-top: 5px;
+    margin-bottom: -30px;
+    border-radius: 50%;
+}
+
+.rank-border {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 300px;
+    height: 90px;
+    background: url(../img/path115.png) no-repeat center center;
+    background-size: contain;
+}
+  
+.corner {
+    position: absolute;
+    width: 300px;
+    height: 450px;
+    background: url(../img/cadre.png) no-repeat center;
+    background-size: contain;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+#contactButton {
+    border: 2px solid var(--gold4);
     display: flex;
     align-items: center;
-    padding: 20px;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    color: white;
-	margin-left: 10px;
+    justify-content: center;
+    max-width: fit-content;
+    height: fit-content;
+    text-transform: uppercase;
 }
- 
-nav a:hover {
-    background: var(--mint);
+
+#contactButton:hover {
+    border: 2px solid var(--gold3);
+}
+
+#contactButton .link p {
+    margin: 10px;
+    color: var(--gold1);
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.element {
+    display: flex;
+}
+
+.contact-infos {
+    display: flex;
+    justify-content: space-around;
+    max-width: 70%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-video {
+    position: relative;
+    width: fit-content;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgb(1, 10, 19), rgba(1, 10, 19, 0) 40%, rgba(1, 10, 19, 0) 60%, rgb(1, 10, 19));
+}
+
+.background-video video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    z-index: -1;
+}
+
+.background-video p:not(.exclude) {
+    text-align: center;
+    padding-left: 9rem;
+    padding-right: 9rem;
+    margin-top: 45px;
+}
+
+.contact video {
+    object-fit: none;
 }
